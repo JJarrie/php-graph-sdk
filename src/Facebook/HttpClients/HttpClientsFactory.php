@@ -53,6 +53,10 @@ class HttpClientsFactory
         if ($handler instanceof FacebookHttpClientInterface) {
             return $handler;
         }
+        
+        if ('psr' === $handler) {
+            return new FacebookPsrHttpClient();
+        }
 
         if ('stream' === $handler) {
             return new FacebookStreamHttpClient();
