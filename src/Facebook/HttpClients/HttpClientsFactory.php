@@ -26,6 +26,7 @@ namespace Facebook\HttpClients;
 use GuzzleHttp\Client;
 use InvalidArgumentException;
 use Exception;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class HttpClientsFactory
 {
@@ -54,8 +55,12 @@ class HttpClientsFactory
             return $handler;
         }
         
-        if ('psr' === $handler) {
-            return new FacebookPsrHttpClient();
+        if ($handler instanceof HttpClientInterface) {
+            return new FacebookSymfonyHttpClient($handler);
+        }
+        
+        if ('symfony' === $handler) {
+            return new FacebookSymfonyHttpClient();
         }
 
         if ('stream' === $handler) {
