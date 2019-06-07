@@ -19,7 +19,13 @@ matrix:
   include:
     - php: hhvm
       dist: trusty
-    - php: [7.1, 7.2, 7.3]
+    - php: 7.1
+      install:
+        - travis_retry composer require symfony/http-client symfony/contracts
+    - php: 7.1
+      install:
+        - travis_retry composer require symfony/http-client symfony/contracts
+    - php: 7.1
       install:
         - travis_retry composer require symfony/http-client symfony/contracts
 
