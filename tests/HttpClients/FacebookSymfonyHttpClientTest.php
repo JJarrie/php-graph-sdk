@@ -8,6 +8,9 @@ use Symfony\Component\HttpClient\Response\MockResponse;
 
 class FacebookSymfonyHttpClientTest extends AbstractTestHttpClient
 {
+    /**
+     * @requires PHP 7.1
+     */
     public function testCanSendNormalRequest()
     {
         $fakeResponse = new MockResponse($this->fakeRawBody, ['http_code' => 200]);
