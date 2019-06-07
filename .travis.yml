@@ -5,9 +5,6 @@ php:
   - 5.5
   - 5.6
   - 7.0
-  - 7.1
-  - 7.2
-  - 7.3
 
 sudo: false
 
@@ -22,10 +19,10 @@ matrix:
     - php: 7.1
       install:
         - travis_retry composer require symfony/http-client symfony/contracts
-    - php: 7.1
+    - php: 7.2
       install:
         - travis_retry composer require symfony/http-client symfony/contracts
-    - php: 7.1
+    - php: 7.3
       install:
         - travis_retry composer require symfony/http-client symfony/contracts
 
