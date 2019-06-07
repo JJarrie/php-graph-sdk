@@ -25,5 +25,4 @@ class FacebookSymfonyHttpClient implements FacebookHttpClientInterface
 
         return new GraphRawResponse($response->getHeaders(), $response->getContent(), $response->getStatusCode());
     }
-
 }
