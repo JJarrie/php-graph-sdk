@@ -20,7 +20,8 @@ matrix:
     - php: hhvm
       dist: trusty
     - php: [7.1, 7.2, 7.3]
-      before_install: travis_retry composer require symfony/http-client symfony/contracts
+      install:
+        - travis_retry composer require symfony/http-client symfony/contracts
 
 before_install:
   - travis_retry composer self-update
