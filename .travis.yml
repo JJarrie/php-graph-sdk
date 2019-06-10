@@ -18,7 +18,8 @@ matrix:
       dist: trusty
     - php: [7.1, 7.2, 7.3]
       install:
-        - travis_retry composer require --dev --no-update symfony/http-client symfony/contracts squizlabs/php_codesniffer
+        - travis_retry composer require --dev --no-update symfony/http-client squizlabs/php_codesniffer
+        - travis_retry composer install --prefer-dist --no-interaction
 
 before_install:
   - travis_retry composer self-update

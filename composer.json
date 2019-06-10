@@ -17,12 +17,13 @@
     "require-dev": {
         "phpunit/phpunit": "~4.0",
         "mockery/mockery": "~0.8",
-        "guzzlehttp/guzzle": "~5.0"
+        "guzzlehttp/guzzle": "~5.0",
+        "symfony/http-client": "^4.3"
     },
     "suggest": {
-      "guzzlehttp/guzzle": "Allows for implementation of the Guzzle HTTP client",
-      "paragonie/random_compat": "Provides a better CSPRNG option in PHP 5",
-      "symfony/http-client": "Allows for implementation of the Symfony/Contracts HTTP client"
+        "paragonie/random_compat": "Provides a better CSPRNG option in PHP 5",
+        "guzzlehttp/guzzle": "Allows for implementation of the Guzzle HTTP client",
+        "symfony/http-client": "Allows for implementation of the Symfony HttpClient Contracts"
     },
     "autoload": {
         "psr-4": {
