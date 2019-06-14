@@ -21,7 +21,8 @@
     },
     "suggest": {
         "paragonie/random_compat": "Provides a better CSPRNG option in PHP 5",
-        "guzzlehttp/guzzle": "Allows for implementation of the Guzzle HTTP client"
+        "guzzlehttp/guzzle": "Allows for implementation of the Guzzle HTTP client",
+        "symfony/http-client": "Allows for implementation of the Symfony HttpClient Contracts"
     },
     "autoload": {
         "psr-4": {
